@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: ENC(3H9um2ldkf/FocnzMzVN4yjQQB2uwg8vyhaniUDjcMc=)
+            clientSecret: ENC(DGv08GiEE1YIhs07CXjonCJuIrdAKEBXgqJezUgosg+E6/GMlXpDfwzPcyWVzpjoudEjWU2rT4Q=)
+          google:
+            client-id: ENC(Gtqvficzo0SSuxfYtFFyyxODmJZJddOHKfQOBMdzSesGImqQmvINVSqCnu87r6iqzP8N3ZslyWQ93v2elro9MzgZbrj82Sf2HRZBUuF+IB6xTNEY9Q6XYQ==)
+            client-secret: ENC(gdwhf4iuBTPAltV+GGdU77vsAshLwb2K+ZO0WRD7eZPWUbYNkafgXalEKK0tT48u)
+            scope: profile, email
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor

@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @RestController
@@ -26,6 +27,11 @@ public class BookController {
 
     }
 
+    @PostMapping("/books")
+    public Book add(@RequestBody Book book) {
+        return repository.save(book);
+    }
+
     @PutMapping("/books")
     public Book changeBook(@RequestBody Book book) {
         return repository.findById(book.getNo())
@@ -41,10 +47,5 @@ public class BookController {
     @DeleteMapping("/books/{no}")
     public void remove(@PathVariable Long no) {
         repository.deleteById(no);
-    }
-
-    @PostMapping("/books")
-    public Book add(@RequestBody Book book) {
-        return repository.save(book);
     }
 }

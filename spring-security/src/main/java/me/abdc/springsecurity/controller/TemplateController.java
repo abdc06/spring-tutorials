@@ -10,4 +10,9 @@ public class TemplateController {
     public String loginView() {
         return "/login";
     }
+
+    @GetMapping("/course")
+    public String courseView() {
+        return "/course";
+    }
 }
